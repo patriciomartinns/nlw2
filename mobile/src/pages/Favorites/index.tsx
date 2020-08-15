@@ -10,6 +10,7 @@ import { useFocusEffect } from '@react-navigation/native'
 
 const Favorites: React.FC = () => {
   const [favorites, setFavorites] = useState([])
+  
   function loadFavorites() {
     AsyncStorage.getItem('favorites').then(response => {
       if (response) {
